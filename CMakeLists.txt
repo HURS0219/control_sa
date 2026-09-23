@@ -26,12 +26,19 @@ endif() # Debug Release RelWithDebInfo MinSizeRel
 #set(ROBOT_TYPE "sentry_mecanum")
 #set(ROBOT_TYPE "engineering")
 #set(ROBOT_TYPE "infantry_wheel_legged_heu")
-set(ROBOT_TYPE "infantry_wheel_legged_sjtu")
+# 选择机器人类型: 可在命令行用 -DROBOT_TYPE=xxx 覆盖 (VS Code 一键烧录用)
+if(NOT DEFINED ROBOT_TYPE)
+    set(ROBOT_TYPE "infantry_wheel_legged_sjtu")
+endif()
 #set(ROBOT_TYPE "infantry_wheel_legged_demo")
 #set(ROBOT_TYPE "hero_mecanum")
 #set(ROBOT_TYPE "infantry_steering")
 #set(ROBOT_TYPE "infantry_mecanum")
 #set(ROBOT_TYPE "dart")
+#set(ROBOT_TYPE "dart_launcher")
+#set(ROBOT_TYPE "wifi_gm6020")
+#set(ROBOT_TYPE "run_motor1")
+#set(ROBOT_TYPE "run_motor2")
 #set(ROBOT_TYPE "debug")；
 
 # 递归包含头文件的函数
