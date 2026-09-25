@@ -105,3 +105,5 @@ cmake-build-debug/
 *.jdebug
 
 *.log
+# CLion/CMake 构建产物（每个 app 一个目录，共 ~113MB，不入库）
+cmake-build-*/

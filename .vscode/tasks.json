@@ -27,6 +27,28 @@
   ],
   "tasks": [
     {
+      "label": "一键烧录 (motor_test / GIMBAL_BOARD)",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/Debug/flash_motor_test.ps1"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "CMake: Configure (Ninja)",
       "type": "shell",
       "command": "cmake",
